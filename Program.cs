@@ -11,7 +11,7 @@ namespace DLTest
         static void Main(string [] args) {
         var connectionString = "***connection string from SAS generation***";
         BlobContainerClient container = new BlobContainerClient(connectionString, "****container name here****"); 
-        var prefix = "test";
+        var prefix = "****directory prefix here****";
         Console.WriteLine("------------Starting.----------------");
         Main2(container, prefix, 20).GetAwaiter().GetResult();
         Console.WriteLine("------------Done.----------------");
