@@ -9,8 +9,8 @@ namespace DLTest
     class Program
     {
         static void Main(string [] args) {
-        var connectionString = "BlobEndpoint=https://thisistotestblobs.blob.core.windows.net/;QueueEndpoint=https://thisistotestblobs.queue.core.windows.net/;FileEndpoint=https://thisistotestblobs.file.core.windows.net/;TableEndpoint=https://thisistotestblobs.table.core.windows.net/;SharedAccessSignature=sv=2021-12-02&ss=bfqt&srt=sco&sp=rwdlacupiytfx&se=2023-03-28T02:37:28Z&st=2023-03-27T18:37:28Z&spr=https&sig=p0tGPCyhOhT%2BImTfjupuock77qGOnTPwnO5K9SW5tfA%3D";
-        BlobContainerClient container = new BlobContainerClient(connectionString, "test"); 
+        var connectionString = "***connection string from SAS generation***";
+        BlobContainerClient container = new BlobContainerClient(connectionString, "****container name here****"); 
         var prefix = "test";
         Console.WriteLine("------------Starting.----------------");
         Main2(container, prefix, 20).GetAwaiter().GetResult();
